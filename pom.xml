@@ -5,16 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.xinhos</groupId>
-  <artifactId>XRTC</artifactId>
+  <artifactId>XRPC</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+
   <modules>
     <module>RMI_RPC</module>
-      <module>XRTC_RMI_BASED</module>
-    <module>FrameWork</module>
-      <module>XRTC_RMI_BASED_API</module>
-      <module>XRTC_RMI_BASED_SERVER</module>
-      <module>XRTC_RMI_BASED_API</module>
+    <module>XRPC_BASED</module>
   </modules>
 
 
