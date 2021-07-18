@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="RMI_RPC_CLIENT" />
+        <module name="XRTC_SERVER" />
+        <module name="XRTC_FrameWork" />
+        <module name="RMI_RPC_API" />
+        <module name="RMI_RPC_SERVER" />
+        <module name="XRTC_API" />
+        <module name="XRTC_CLIENT" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="RMI_RPC" target="11" />
+      <module name="RMI_RPC_API" target="11" />
+      <module name="RMI_RPC_CLIENT" target="11" />
+      <module name="RMI_RPC_SERVER" target="11" />
+      <module name="XRPC" target="11" />
+      <module name="XRPC_BASED" target="11" />
+      <module name="XRTC_API" target="11" />
+      <module name="XRTC_CLIENT" target="11" />
+      <module name="XRTC_FrameWork" target="11" />
+      <module name="XRTC_SERVER" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

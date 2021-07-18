@@ -1,7 +1,7 @@
 package cn.xrpc.client;
 
-import cn.xrpc.dto.Request;
+import cn.xrpc.dto.RequestDTO;
 
 public interface Client {
-    Object sendRequest(Request request);
+    Object sendRequest(RequestDTO requestDTO);
 }

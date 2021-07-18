@@ -1,8 +1,7 @@
 package cn.xrpc.spring;
 
-import cn.xrpc.spring.anotation.RPCService;
-import cn.xrpc.spring.anotation.RPCServiceScan;
-import lombok.extern.slf4j.Slf4j;
+import cn.xrpc.annotation.RPCService;
+import cn.xrpc.annotation.RPCServiceScan;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
@@ -11,16 +10,17 @@ import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.StandardAnnotationMetadata;
+import org.springframework.lang.NonNull;
 
-/* 包扫描器，令spring加载时扫描用户指定路径下的RPCService注解，并扫描框架中的组件 */
-@Slf4j
+/* 开启组件扫描，将被@RPCService注解的类对象放到IOC容器中，并扫描框架中的组件 */
 public class PackageScannerRegister implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
     private static final String COMPONENT_PACKAGE = "cn.xrpc";
     private static final String BASE_PACKAGE_NAME = "basePackages";
     private ResourceLoader resourceLoader;
 
     @Override
-    public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
+    public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata,
+                                        @NonNull BeanDefinitionRegistry registry) {
         // 获取RPCServiceScan注解上的basePackages属性
         String[] rpcServicePackages = new String[0];
         AnnotationAttributes rpcScanAttributes = AnnotationAttributes
@@ -34,7 +34,7 @@ public class PackageScannerRegister implements ImportBeanDefinitionRegistrar, Re
             rpcServicePackages = new String[] { metadata.getIntrospectedClass().getPackage().getName() };
         }
 
-        // 扫描注解
+        // 开启组件扫描、@RPCService扫描
         RPCServiceScanner rpcServiceScanner = new RPCServiceScanner(registry, RPCService.class);
         ClassPathBeanDefinitionScanner componentScanner = new ClassPathBeanDefinitionScanner(registry);
         if (resourceLoader != null) {
@@ -43,11 +43,10 @@ public class PackageScannerRegister implements ImportBeanDefinitionRegistrar, Re
         }
         rpcServiceScanner.scan(rpcServicePackages);  // 扫描RPCService注解
         componentScanner.scan(COMPONENT_PACKAGE);    // 扫描框架中的组件（相当于<component-scan>）
-
     }
 
     @Override
-    public void setResourceLoader(ResourceLoader resourceLoader) {
-
+    public void setResourceLoader(@NonNull ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
     }
 }

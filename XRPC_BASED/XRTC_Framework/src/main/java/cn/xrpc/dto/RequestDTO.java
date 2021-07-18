@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Builder
 @ToString
-public class Request {
+public class RequestDTO {
     private String id;
     private String interfaceName;
     private String methodName;

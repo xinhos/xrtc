@@ -1,4 +1,4 @@
-package cn.xrpc.spring.anotation;
+package cn.xrpc.annotation;
 
 import cn.xrpc.spring.PackageScannerRegister;
 import org.springframework.context.annotation.Import;

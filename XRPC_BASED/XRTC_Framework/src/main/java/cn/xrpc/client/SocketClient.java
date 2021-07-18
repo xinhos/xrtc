@@ -1,7 +1,7 @@
 package cn.xrpc.client;
 
 import cn.xrpc.registry.RegistryCenter;
-import cn.xrpc.dto.Request;
+import cn.xrpc.dto.RequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class SocketClient implements Client{
@@ -9,7 +9,7 @@ public class SocketClient implements Client{
     private RegistryCenter registryCenter;
 
     @Override
-    public Object sendRequest(Request request) {
+    public Object sendRequest(RequestDTO requestDTO) {
         return null;
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RMI_RPC/RMI_RPC.iml" filepath="$PROJECT_DIR$/RMI_RPC/RMI_RPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI_RPC/RMI_RPC_API/RMI_RPC_API.iml" filepath="$PROJECT_DIR$/RMI_RPC/RMI_RPC_API/RMI_RPC_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI_RPC/RMI_RPC_CLIENT/RMI_RPC_CLIENT.iml" filepath="$PROJECT_DIR$/RMI_RPC/RMI_RPC_CLIENT/RMI_RPC_CLIENT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI_RPC/RMI_RPC_SERVER/RMI_RPC_SERVER.iml" filepath="$PROJECT_DIR$/RMI_RPC/RMI_RPC_SERVER/RMI_RPC_SERVER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC.iml" filepath="$PROJECT_DIR$/XRPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC_BASED/XRPC_BASED.iml" filepath="$PROJECT_DIR$/XRPC_BASED/XRPC_BASED.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC_BASED/XRTC_API/XRTC_API.iml" filepath="$PROJECT_DIR$/XRPC_BASED/XRTC_API/XRTC_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC_BASED/XRTC_CLIENT/XRTC_CLIENT.iml" filepath="$PROJECT_DIR$/XRPC_BASED/XRTC_CLIENT/XRTC_CLIENT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC_BASED/XRTC_Framework/XRTC_FrameWork.iml" filepath="$PROJECT_DIR$/XRPC_BASED/XRTC_Framework/XRTC_FrameWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XRPC_BASED/XRTC_SERVER/XRTC_SERVER.iml" filepath="$PROJECT_DIR$/XRPC_BASED/XRTC_SERVER/XRTC_SERVER.iml" />
+    </modules>
+  </component>
+</project>

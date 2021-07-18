@@ -1,7 +1,7 @@
 package cn.xrpc.server;
 
-import cn.xrpc.dto.Respose;
+import cn.xrpc.dto.ResposeDTO;
 
 public interface Server {
-    void sendResponse(Respose respose);
+    void sendResponse(ResposeDTO respose);
 }
